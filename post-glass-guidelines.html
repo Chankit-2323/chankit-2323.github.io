@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WHO GLASS & Biosecurity Guidelines | Chankit Research</title>
+    <!-- Include Chart.js for data visualization -->
+    <script src="https://jsdelivr.net"></script>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #fcfcfc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; max-width: 850px; margin: 0 auto; padding: 20px; background-color: #fcfcfc; }
         .back-nav { margin-bottom: 20px; }
-        .back-nav a { color: #0d2c54; text-decoration: none; font-weight: bold; }
+        .back-nav a { color: #e15a97; text-decoration: none; font-weight: bold; }
         article { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #f1c40f; }
         h1 { color: #0d2c54; line-height: 1.3; margin-top: 10px; }
         .meta { color: #777; font-size: 0.9em; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
-        h2 { color: #0d2c54; margin-top: 30px; border-bottom: 1px solid #eaeaea; padding-bottom: 5px; }
+        h2 { color: #0d2c54; margin-top: 35px; border-bottom: 1px solid #eaeaea; padding-bottom: 5px; }
         h3 { color: #c0392b; font-size: 1.1em; margin-top: 15px; }
+        
+        /* Data Display Layout Styling */
+        .dashboard-box { background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 6px; padding: 25px; margin: 25px 0; }
+        .chart-container { position: relative; margin: auto; height: 320px; width: 100%; margin-bottom: 25px; }
+        
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.95em; }
+        .data-table th, .data-table td { padding: 12px; text-align: left; border-bottom: 1px solid #dee2e6; }
+        .data-table th { background-color: #0d2c54; color: white; border-top: none; }
+        .data-table tr:hover { background-color: #f1f3f5; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; color: white; }
+        .badge-high { background-color: #dc3545; }
+        .badge-med { background-color: #fd7e14; }
+
         .citation { background: #f4f6f8; padding: 20px; border-left: 4px solid #555; font-size: 0.95em; margin-top: 40px; border-radius: 4px; }
         .citation ol { padding-left: 20px; }
     </style>
@@ -27,8 +42,56 @@
 
         <p>The World Health Organization’s Global Antimicrobial Resistance and Use Surveillance System (GLASS) highlights an escalating threat matrix from high-priority ESKAPE pathogens. While surveillance identifies the trajectory of drug-resistant infections, containing them requires an aggressive operational integration of Infection Prevention and Control (IPC) standards across both human medicine and intensive agricultural sectors.</p>
 
+        <!-- VISUAL DATA DASHBOARD SECTION -->
+        <h2>Surveillance Insights: High-Priority Resistance Trajectories</h2>
+        <p>Data aggregates monitored by WHO GLASS underscore critical tracking targets. Hover over the interactive graph below to observe global resistance prevalence ranges across sentinel clinical isolates:</p>
+
+        <div class="dashboard-box">
+            <div class="chart-container">
+                <canvas id="glassChart"></canvas>
+            </div>
+
+            <h3>Reference Metric Summary Table</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Pathogen Group</th>
+                        <th>Key Antimicrobial Class</th>
+                        <th>Median Resistance Profile</th>
+                        <th>Global Surveillance Threat Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Acinetobacter baumannii</strong></td>
+                        <td>Carbapenem Resistance</td>
+                        <td>~56.0%</td>
+                        <td><span class="badge badge-high">Critical Priority</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Escherichia coli</strong></td>
+                        <td>3rd Gen Cephalosporins</td>
+                        <td>~42.0%</td>
+                        <td><span class="badge badge-high">Critical Priority</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Staphylococcus aureus</strong></td>
+                        <td>Methicillin Resistance (MRSA)</td>
+                        <td>~35.0%</td>
+                        <td><span class="badge badge-med">High Priority</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Klebsiella pneumoniae</strong></td>
+                        <td>Carbapenem Resistance</td>
+                        <td>~28.0%</td>
+                        <td><span class="badge badge-high">Critical Priority</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <h2>1. Clinical Settings: Reinforcing Hospital IPC and Hygiene Barriers</h2>
-        <p>Hospitals act as primary incubation hotspots for opportunistic multi-drug resistant organisms (MDROs) like methicillin-resistant <em>Staphylococcus aureus</em> (MRSA) and carbapenem-resistant <em>Acinetobacter baumannii</em>. To circumvent hospital-acquired infections (HAIs), clinical systems must execute strict structural hygiene protocols:</p>
+        <p>Hospitals act as primary incubation hotspots for opportunistic multi-drug resistant organisms (MDROs). To circumvent hospital-acquired infections (HAIs), clinical systems must execute strict structural hygiene protocols:</p>
         
         <h3>The 'Five Moments for Hand Hygiene'</h3>
         <p>Alcohol-based hand rubs and targeted antiseptic scrubbing must be strictly enforced before touching a patient, before clean/aseptic procedures, after body fluid exposure risk, after touching a patient, and after touching patient surroundings.</p>
@@ -37,7 +100,7 @@
         <p>Active isolation of colonized patients paired with high-frequency environmental decontamination using sporicidal agents is mandatory. Because pathogens survive dynamically on high-touch medical equipment, monitoring bio-burden footprints prevents cross-contamination pathways.</p>
 
         <h2>2. Agricultural and Farm Ecosystems: Mitigating Environmental Selectivity</h2>
-        <p>Under the One Health framework, agricultural domains require strict structural transformations to prevent the selection and outward migration of mobile resistance genes. Animal husbandry setups often rely heavily on antimicrobials, generating massive pools of resistance that spill into human populations.</p>
+        <p>Under the One Health framework, agricultural domains require strict structural transformations to prevent the selection and outward migration of mobile resistance genes.</p>
 
         <h3>Enforcing Farm Biosecurity Protocols</h3>
         <p>Farms must replace prophylactic (preventative) broad-spectrum antibiotic groups with robust environmental controls. This includes implementing rigorous all-in/all-out livestock management, sanitizing vehicle entry points, and enforcing protective clothing changes for all farm workers to block zoonotic vectors.</p>
@@ -55,5 +118,51 @@
         </div>
     </article>
 
-</body>
-</html>
+    <!-- CHARTS CORE SCRIPT INTERFACING ENGINE -->
+    <script>
+        const ctx = document.getElementById('glassChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'A. baumannii (Carbapenem-R)', 
+                    'E. coli (3rd Gen Ceph-R)', 
+                    'S. aureus (MRSA)', 
+                    'K. pneumoniae (Carbapenem-R)'
+                ],
+                datasets: [{
+                    label: 'Global Median Resistance Prevalence (%)',
+                    data: [56.0, 42.0, 35.0, 28.0],
+                    backgroundColor: [
+                        'rgba(220, 53, 69, 0.85)',
+                        'rgba(220, 53, 69, 0.85)',
+                        'rgba(253, 126, 20, 0.85)',
+                        'rgba(220, 53, 69, 0.85)'
+                    ],
+                    borderColor: [
+                        '#dc3545',
+                        '#dc3545',
+                        '#fd7e14',
+                        '#dc3545'
+                    ],
+                    borderWidth: 1.5,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Resistance Percentage (%)',
+                            font: { weight: 'bold' }
+                        }
+                    },
+                    x: {
