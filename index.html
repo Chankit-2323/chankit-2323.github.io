@@ -42,6 +42,9 @@
         .section-alt {
             border-left: 5px solid #e15a97;
         }
+        .section-pub {
+            border-left: 5px solid #f1c40f;
+        }
         h2 {
             color: #0d2c54;
             margin-top: 0;
@@ -57,7 +60,7 @@
             padding-left: 20px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
         .btn-download {
             display: inline-block;
@@ -73,6 +76,20 @@
         .btn-download:hover {
             background-color: #008484;
         }
+        .btn-blog {
+            display: inline-block;
+            background-color: #e15a97;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+        .btn-blog:hover {
+            background-color: #b84377;
+        }
         .meta-tag {
             display: inline-block;
             background: #eaeaea;
@@ -82,6 +99,17 @@
             color: #555;
             margin-bottom: 15px;
             font-weight: bold;
+        }
+        .pub-link {
+            display: inline-block;
+            color: #00a6a6;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-top: 4px;
+        }
+        .pub-link:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
@@ -103,7 +131,7 @@
     <!-- SECTION 1: ABOUT & WELCOME -->
     <div class="section">
         <h2>About the Portal</h2>
-        <p>Welcome! I am <strong>Chankit</strong>. This open-access digital platform is a dedicated space for raising public awareness, tracking critical scientific updates, and analyzing data surrounding the multi-drug resistance pandemic. My goal is to bridge the gap between complex research data and global healthcare advocacy.</p>
+        <p>Welcome! I am <strong>Chankit Giri</strong>. This open-access digital platform is a dedicated space for raising public awareness, tracking critical scientific updates, and analyzing data surrounding the multi-drug resistance pandemic. My goal is to bridge the gap between complex research data and global healthcare advocacy.</p>
         
         <h3>Core Objectives:</h3>
         <ul>
@@ -111,7 +139,7 @@
             <li>Tracking the evolutionary trajectories of high-threat ESKAPE pathogens.</li>
             <li>Bridging molecular biology research with public health strategy.</li>
         </ul>
-<!-- NEWLY ADDED BLOG ACCESS SECTION -->
+
         <h3>Research Publication Index:</h3>
         <p>Explore my standalone technical papers, clinical trial reviews, and genomic tracking summaries:</p>
         <a href="blog.html" class="btn-blog">📂 View My Full AMR Blog & Research Notes</a>
@@ -120,9 +148,24 @@
         <p>Access my comprehensive slide deck breaking down global policy trajectories, transmission dynamics, and clinical action plans:</p>
         <a href="AMR_Crisis%20Chankit.pptx" download class="btn-download">📊 Download My Presentation (AMR_Crisis Chankit.pptx)</a>
     </div>
-        <h3>Featured Materials:</h3>
-        <p>Access my comprehensive slide deck breaking down global policy trajectories, transmission dynamics, and clinical action plans:</p>
-        <a href="AMR_Crisis%20Chankit.pptx" download class="btn-download">📊 Download My Presentation (AMR_Crisis Chankit.pptx)</a>
+
+    <!-- NEW SECTION: PEER-REVIEWED PUBLICATIONS -->
+    <div class="section section-pub">
+        <h2>Peer-Reviewed Publications</h2>
+        <p>Official scientific contributions to the fields of microbial genomics, virulence mechanics, and antimicrobial pathways:</p>
+        <ul>
+            <li>
+                <strong>Genomic and Functional Characterization of Multidrug-Resistant E. coli: Insights into Resistome, Virulome, and Signaling Systems</strong><br>
+                <span style="font-size: 0.93em; color: #555;">Srinivasan, V. B., Rajasekar, N., Krishnan, K., Kumar, M., <strong>Giri, C.</strong>, Singh, B., & Rajamohan, G.</span><br>
+                <a href="https://nih.gov" target="_blank" class="pub-link">🧬 View Research via PubMed</a>
+            </li>
+            <li>
+                <strong>The dual implications of iron homeostasis as a bacterial threat: its roles in virulence and antimicrobial resistance</strong><br>
+                <span style="font-size: 0.93em; color: #555;">Rajasekar, N., Srinivasan, V. B., Krishnan, K., <strong>Giri, C.</strong>, Kumar, M., Singh, B., & Rajamohan, G.</span><br>
+                <span style="font-size: 0.88em; color: #777; display: block; margin-top: 2px;">PMID: 41364194 | DOI: 10.1007/s00203-025-04594-8</span>
+                <a href="https://doi.org" target="_blank" class="pub-link">🔬 View Article via Springer / DOI Link</a>
+            </li>
+        </ul>
     </div>
 
     <!-- SECTION 2: THE MACRO THREAT -->
@@ -161,14 +204,3 @@
         <h2>Scientific References & Sources</h2>
         <ol>
             <li><strong>World Health Organization (WHO).</strong> COVID-19 Dashboard and Global Excess Mortality Tracking, 2020.</li>
-            <li><strong>GRAM Project.</strong> Global burden of bacterial antimicrobial resistance in 2019: a systematic analysis. <em>The Lancet</em>, 2022.</li>
-            <li><strong>O'Neill, J.</strong> Review on Antimicrobial Resistance: Tackling a crisis for the health and wealth of nations. UK Government & Wellcome Trust, 2016 (2050 Projections).</li>
-        </ol>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Chankit. All rights reserved. | Global Public Health Priority | Powered by GitHub Pages</p>
-    </footer>
-
-</body>
-</html>
