@@ -1,0 +1,421 @@
+/* Core Styling Variables & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+/* Header and Menu Navigation */
+header {
+    background-color: #0f172a;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #0d9488; /* Lab teal */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #0d9488;
+}
+
+/* Urgent Hero Space */
+.hero {
+    background: linear-gradient(135deg, #090d16 0%, #0f172a 100%);
+    color: #ffffff;
+    padding: 140px 5% 100px 5%;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.alert-badge {
+    background-color: #ef4444; /* Crisis crimson */
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+}
+
+/* Tactical Interaction Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 1.8rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-alert {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.btn-alert:hover {
+    background-color: #dc2626;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #475569;
+}
+
+.btn-secondary:hover {
+    background-color: #1e293b;
+    border-color: #94a3b8;
+}
+
+/* Statistical Dashboard Layout */
+.stats-dashboard {
+    background-color: #ffffff;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.stat-card {
+    flex: 1;
+    padding: 40px 30px;
+    border-radius: 12px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.stat-card.urgent {
+    border-top: 5px solid #ef4444;
+    box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.1);
+}
+
+.stat-number {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-card.urgent .stat-number {
+    color: #b91c1c;
+}
+
+.stat-label {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.stat-desc {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Public Safety Prevention Grid */
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+}
+
+.guide-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease;
+}
+
+.guide-card:hover {
+    transform: translateY(-4px);
+}
+
+.guide-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.guide-card h3 {
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.guide-card p {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+/* Academic Profile Component */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.profile-text {
+    flex: 2;
+}
+
+.profile-text h2 {
+    font-size: 2.2rem;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.academic-tag {
+    display: inline-block;
+    color: #0d9488;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.profile-text p {
+    margin-bottom: 15px;
+    color: #334155;
+}
+
+/* Global Section Scaffolding */
+.section-padding {
+    padding: 90px 5%;
+}
+
+.alternating-bg {
+    background-color: #f1f5f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-top: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Publications Blueprint */
+.pub-list {
+    max-width: 850px;
+    margin: 40px auto 0 auto;
+}
+
+.pub-item {
+    display: flex;
+    gap: 25px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.pub-date {
+    background: #ccfbf1;
+    color: #0f766e;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    align-self: flex-start;
+}
+
+.pub-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pub-link {
+    color: #0d9488;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+.pub-link:hover {
+    text-decoration: underline;
+}
+
+/* Contact Network Section */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    border-color: #0d9488;
+    box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.05);
+}
+
+.contact-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.contact-card h3 {
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.contact-detail {
+    color: #0d9488;
+    font-size: 0.95rem;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+/* Advocacy Footer */
+footer {
+    background-color: #090d16;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.footer-content p strong {
+    color: #ef4444;
+    font-size: 1.1rem;
+}
+
+.copyright {
+    color: #475569;
+    font-size: 0.85rem;
+    margin-top: 15px;
+}
+
+/* Mobile Screen Breakpoints */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+    .stats-grid, .profile-container, .contact-grid {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+}
