@@ -75,6 +75,52 @@
             color: #777;
             border-top: 1px solid #eaeaea;
         }
+        
+        /* Inner formatting layouts for the complete embedded post expansion */
+        .full-post-content {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed #eaeaea;
+        }
+        .full-post-content h3 {
+            color: #0d2c54;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .full-post-content ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        .full-post-content li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background-color: #fdf2f2;
+            border-left: 4px solid #d9534f;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .reference-section {
+            margin-top: 35px;
+            padding-top: 15px;
+            border-top: 2px dashed #eaeaea;
+        }
+        .reference-list {
+            padding-left: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .reference-list li {
+            margin-bottom: 8px;
+        }
+        .ref-link {
+            color: #00a6a6;
+            text-decoration: none;
+        }
+        .ref-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -95,11 +141,56 @@
         <a href="blog-zaynich.html" class="btn-read">Read full analysis →</a>
     </div>
 
-    <!-- BLOG POST 2: BLIND PRESCRIBING ANALYSIS -->
+    <!-- BLOG POST 2: BLIND PRESCRIBING ANALYSIS (WITH FULL COMPLETED WRITE-UP) -->
     <div class="post-preview" style="border-left-color: #c0392b;">
         <h2>Prescribing in the Dark: How Empirical Antibiotic Use Fueling the AMR Crisis</h2>
-        <p>Bypassing the tracking of specific pathogens and their Minimum Inhibitory Concentrations (MIC) creates a perfect evolutionary incubator for superbugs...</p>
-        <a href="blog-amr-prescription.html" class="btn-read" style="color: #c0392b;">Read full analysis →</a>
+        
+        <div class="full-post-content">
+            <p>In modern medicine, antibiotics are routinely treated as a first line of defense rather than a precision weapon. Daily, thousands of patients walk out of clinics with broad-spectrum antibiotic prescriptions without undergoing any clinical or microbiological diagnostic confirmation. This practice of "blind prescribing" bypassing the tracking of specific pathogens and their Minimum Inhibitory Concentrations (MIC) directly accelerates global antimicrobial resistance (AMR).</p>
+
+            <div class="highlight-box">
+                <strong>The Core Issue:</strong> Treating an unknown bacterial enemy with an unverified dosage creates a perfect evolutionary incubator for superbugs.
+            </div>
+
+            <h3>1. The Blind Spot: Missing Microbiological Confirmation</h3>
+            <p>When a physician prescribes an antibiotic based purely on visual symptoms, they assume the underlying cause. Symptomatic presentation frequently overlaps across completely different pathogens. Treating a viral infection or a non-susceptible bacterial strain with standard antibiotics does nothing to clear the illness; instead, it exposes billions of innocent commensal microbes within the patient's gut microbiome to intense selective evolutionary pressure.</p>
+
+            <h3>2. Ignoring the MIC: An Evolutionary Catalyst</h3>
+            <p>The <strong>Minimum Inhibitory Concentration (MIC)</strong> is the lowest concentration of an antimicrobial agent that prevents visible growth of a microorganism in a laboratory setting. Prescribing without checking the MIC leads to dangerous dosing inaccuracies:</p>
+            <ul>
+                <li>
+                    <strong>Under-dosing (Sub-lethal exposure):</strong> If the prescribed dosage falls below the true MIC of the target pathogen, it fails to kill the bacteria. Instead, it acts as an evolutionary training ground, allowing survivors to develop genetic mutations that protect against future treatments.
+                </li>
+                <li>
+                    <strong>Over-dosing:</strong> Unnecessary toxic exposure that wipes out healthy microbiome networks, leaving room for hyper-virulent pathogens like <i>Clostridioides difficile</i> to dominate.
+                </li>
+            </ul>
+
+            <h3>3. Broad-Spectrum Reliance vs. Target Stewardship</h3>
+            <p>Because diagnostic workflows take 48 to 72 hours using legacy culture methods, clinicians lean heavily on heavy broad-spectrum agents. This scorched-earth policy eliminates highly vulnerable bacteria while leaving highly dangerous, resistant variants completely unchecked. True clinical stewardship requires narrow-spectrum alternatives tailored directly to confirmed microbiological profiles.</p>
+
+            <h3>The Urgent Need for Rapid Diagnostics</h3>
+            <p>To prevent global medicine from regressing into a pre-antibiotic era, healthcare ecosystems must pivot toward rapid point-of-care molecular assays and genomics tracking tools. Clinicians must be equipped to transition from empirical guessing patterns to diagnostic-driven precision therapies.</p>
+
+            <!-- SCIENTIFIC REFERENCES INDEX -->
+            <div class="reference-section">
+                <h3 style="margin-top:0;">References & Scientific Literature</h3>
+                <ol class="reference-list">
+                    <li>
+                        <strong>World Health Organization (2026).</strong> 
+                        <a class="ref-link" href="https://who.int" target="_blank">Antimicrobial resistance Fact Sheet</a>. Global reporting on antibiotic misuse trends and surveillance gaps.
+                    </li>
+                    <li>
+                        <strong>Murray, C. J., et al. (2022).</strong> 
+                        <a class="ref-link" href="https://thelancet.com" target="_blank">Global burden of bacterial antimicrobial resistance in 2019: a systematic analysis</a>. The Lancet (GRAM Study).
+                    </li>
+                    <li>
+                        <strong>National Center for Biotechnology Information (NCBI).</strong> 
+                        <a class="ref-link" href="https://nih.gov" target="_blank">Appropriateness of Empirical Antibiotic Therapy in Hospitalized Patients</a>. Retrospective clinical evaluation of broad-spectrum empirical failures.
+                    </li>
+                </ol>
+            </div>
+        </div>
     </div>
 
     <!-- CLEANED SITE FOOTER WITH AI DISCLAIMER -->
