@@ -3740,7 +3740,7 @@ This blog post is an independent secondary review compiled solely for educationa
 <footer>
 
 <!-- BLOG POST PREVIEW 9 -->
-    <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -3781,7 +3781,14 @@ This blog post is an independent secondary review compiled solely for educationa
             border-radius: 4px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
-        /* Blog Number Label */
+
+        /* Clean Header Formatting */
+        header.clean-blog-header {
+            background: none !important;
+            padding: 0 !important;
+            margin-bottom: 35px;
+        }
+
         .blog-number-tag {
             font-size: 1.05rem;
             color: #64748b;
@@ -3790,10 +3797,9 @@ This blog post is an independent secondary review compiled solely for educationa
             display: block;
         }
 
-        /* Header Elements */
         h1.blog-title {
             font-size: 2.1rem;
-            color: var(--primary-black);
+            color: var(--primary-black) !important;
             line-height: 1.3;
             font-weight: 700;
             margin-bottom: 25px;
@@ -3803,7 +3809,6 @@ This blog post is an independent secondary review compiled solely for educationa
         .meta-strip {
             font-size: 0.9rem;
             color: var(--muted-gray);
-            margin-bottom: 35px;
         }
 
         .meta-strip span {
@@ -3823,6 +3828,16 @@ This blog post is an independent secondary review compiled solely for educationa
             margin-bottom: 20px;
             color: #334155;
             text-align: justify;
+        }
+
+        .intro-awareness-note {
+            font-size: 1.02rem;
+            font-style: italic;
+            color: var(--muted-gray);
+            background-color: #f8fafc;
+            border-left: 3px solid #64748b;
+            padding: 12px 20px;
+            margin-bottom: 25px;
         }
 
         ul, ol {
@@ -3950,7 +3965,7 @@ This blog post is an independent secondary review compiled solely for educationa
             margin-bottom: 0;
         }
 
-        /* Global Sticky Footer System */
+        /* Global Footer */
         footer.blog-footer {
             text-align: center;
             margin-top: 60px;
@@ -3968,22 +3983,16 @@ This blog post is an independent secondary review compiled solely for educationa
         }
 
         @media (max-width: 768px) {
-            body {
-                padding: 15px 10px;
-            }
-            .blog-container {
-                padding: 30px 20px;
-            }
-            h1.blog-title {
-                font-size: 1.65rem;
-            }
+            body { padding: 15px 10px; }
+            .blog-container { padding: 30px 20px; }
+            h1.blog-title { font-size: 1.65rem; }
         }
     </style>
 </head>
 <body>
     <div class="blog-container">
         <!-- Header Section -->
-        <header>
+        <header class="clean-blog-header">
             <span class="blog-number-tag">Blog #9</span>
             <h1 class="blog-title">Clostridioides difficile water-soluble zwitterionic lipoteichoic-acid wsPS-III: Structure, synthesis and immunogenicity</h1>
             <div class="meta-strip">
@@ -3992,6 +4001,10 @@ This blog post is an independent secondary review compiled solely for educationa
                 <span><strong>Category:</strong> Glycobiology & Immunology</span>
             </div>
         </header>
+
+        <div class="intro-awareness-note">
+            <strong>Note:</strong> The original pioneering research reviewed in this article was conducted by <strong>Dr. Mario A. Monteiro and his research team</strong>. This summary is prepared and shared strictly for educational awareness and scientific dissemination purposes.
+        </div>
 
         <hr>
 
@@ -4006,30 +4019,31 @@ This blog post is an independent secondary review compiled solely for educationa
                 <li><strong>PS-III</strong> is typically a lipid-bound, phenol-soluble lipoteichoic acid (LTA) anchored tightly to the membrane.</li>
             </ul>
 
-            <p>The newly uncovered variant—<strong>wsPS-III</strong>—breaks these rules. <strong>Crucially, this novel sugar variant was discovered and isolated directly from a horse (equine) strain of <em>C. diff</em>.</strong> What makes this equine-derived wsPS-III stand out is that it is completely <strong>water-soluble</strong> while maintaining its structural identity to the PS-III family.</p>
+            <p>The newly uncovered variant—<strong>wsPS-III</strong>—breaks these rules. Crucially, this novel sugar variant was discovered and isolated directly from a horse (equine) strain of <em>C. diff</em>. What makes this equine-derived wsPS-III stand out is that it is completely water-soluble while maintaining its structural identity to the PS-III family. </p>
 
-            <p>The structural configuration reveals exactly why it behaves this way. Standard PS-III structures contain repeating units of two <em>N</em>-acetyl-glucopyranosamine (GlcNAc) molecules and a glyceric acid (GroA), linked via a phosphadeshur bridge. However, this specific strain features a modified repeat where a 6-substituted glucopyranosamine (GlcN) sits dominantly in place of one GlcNAc. This small chemical shift yields a <strong>zwitterionic</strong> molecule—meaning it carries both positive and negative electrical charges simultaneously. This specific ionic equilibrium acts as the primary driving force behind its unique solubility in water.</p>
+            <p>The structural configuration characterized by <strong>Dr. Mario A. Monteiro and his team</strong> reveals exactly why it behaves this way. Standard PS-III structures contain repeating units of two <em>N</em>-acetyl-glucopyranosamine (GlcNAc) molecules and a glyceric acid (GroA), linked via a phosphodiester bridge. However, this specific strain features a modified repeat where a 6-substituted glucopyranosamine (GlcN) sits dominantly in place of one GlcNAc. This small chemical shift yields a <strong>zwitterionic</strong> molecule—meaning it carries both positive and negative electrical charges simultaneously. This specific ionic equilibrium acts as the primary driving force behind its unique solubility in water.</p>
 
             <h3 class="section-heading">Synthetic Mastery: Building wsPS-III in the Lab</h3>
-            <p>Isolating pure, uniform carbohydrates directly from biological <em>C. diff</em> cultures is notoriously difficult because natural extractions often produce inconsistent, microheterogeneous mixtures. To solve this, researchers turned to precision organic synthesis to build identical chemical models:</p>
+            <p>Isolating pure, uniform carbohydrates directly from biological <em>C. diff</em> cultures is notoriously difficult because natural extractions often produce inconsistent, microheterogeneous mixtures. To solve this, the <strong>Monteiro Research Group</strong> turned to precision organic synthesis to build identical chemical models:</p>
             <ol>
-                <li><strong>Chemical Construction:</strong> Chemists synthetically engineered two distinct saccharides: &alpha;-D-GlcN-(1-3)-&alpha;-D-GlcNAc-(1-2)-GroA and &alpha;-D-GlcNAc-(1-3)-&alpha;-D-GlcNAc-(1-2)-GroA.</li>
+                <li><strong>Chemical Construction:</strong> The chemists synthetically engineered two distinct saccharides: &alpha;-D-GlcN-(1-3)-&alpha;-D-GlcNAc-(1-2)-GroA and &alpha;-D-GlcNAc-(1-3)-&alpha;-D-GlcNAc-(1-2)-GroA.</li>
                 <li><strong>Smith Degradation:</strong> They selectively cleaved chemical bonds to generate a reliable transformation product, Gro-(1-P-6)-&alpha;-D-GlcNAc-(1-2)-GroA.</li>
             </ol>
-            <p>By building these pure, defined synthetic glycans, scientists can run controlled assays without background interference, allowing them to uncover the exact role these sugars play in bacterial survival and human disease.</p>
+            <p>By building these pure, defined synthetic glycans, the researchers enabled controlled assays without background interference, allowing them to uncover the exact role these sugars play in bacterial survival and human disease.</p>
 
             <h3 class="section-heading">Immunogenicity: The Next-Gen Vaccine Frontier</h3>
             <p>The ultimate value of studying wsPS-III lies in its intense <strong>immunogenicity</strong>—its ability to trigger a highly targeted immune response. Because carbohydrates are often hidden from the immune system, finding one that naturally prompts a reaction is a massive win for vaccine development.</p>
             
-            <p>During evaluations, researchers noted two critical immunological behaviors:</p>
+            <p>During evaluations conducted in the study, the investigators noted two critical immunological behaviors:</p>
             <ul>
-                <li><strong>Natural Exposure:</strong> Horse sera naturally contained pre-existing circulating IgG antibodies that successfully bound to wsPS-III, proving that animals exposed to this equine <em>C. diff</em> strain naturally flag this sugar.</li>
-                <li><strong>Active Immunization:</strong> When rabbits were inoculated with the synthetic wsPS-III variants, they generated a robust wave of IgG antibodies that specifically target and bind to <em>C. diff</em>.</li>
+                <li><strong>Natural Exposure:</strong> Horse sera naturally contained pre-existing circulating IgG antibodies that successfully bound to wsPS-III, proving that animals exposed to this equine <em>C. diff</em> strain naturally flag this sugar layer.</li>
+                <li><strong>Active Immunization:</strong> When rabbits were inoculated with the synthetic wsPS-III variants designed by <strong>Monteiro et al.</strong>, they generated a robust wave of IgG antibodies that specifically target and bind to <em>C. diff</em>.</li>
             </ul>
             <p>Because wsPS-III is water-soluble, it can be easily formulated into experimental glycoconjugate vaccines, offering a clear upgrade over older, lipid-bound, difficult-to-deliver LTA targets.</p>
 
             <h3 class="section-heading">The Future of C. diff Therapeutics</h3>
             <p>The discovery of wsPS-III expands our understanding of <em>C. diff</em> surface biology. By mapping out its structure, mastering its laboratory synthesis, and proving its immunogenic power, science has unlocked a new vulnerability in a historically resilient pathogen. Whether used to build preventative vaccines or precise diagnostic tools, this zwitterionic sugar may soon help us neutralize <em>C. diff</em> infections before they can devastate a patient's gut flora.</p>
+
             <div class="hypothesis-box">
                 <div class="hypothesis-title">💡 HYPOTHESIS & EVOLUTIONARY THOUGHTS</div>
                 <p class="hypothesis-text">Who knows? What I think is happening here points to a deep evolutionary question. If wsPS-III is so highly immunogenic that it causes the host immune system to easily target and flag <em>C. diff</em>, why would the bacteria keep such a mutation? From an evolutionary perspective, a mutation that makes a pathogen easily visible to immune defenses should be selected against. Unless—the trade-off is worth it.</p>
@@ -4054,11 +4068,31 @@ This blog post is an independent secondary review compiled solely for educationa
                 <div class="author-title">CSIR–Institute of Microbial Technology (CSIR-IMTECH), Chandigarh, India</div>
             </div>
 
-            <p class="author-summary">This article is an independent scientific summary prepared to communicate recent advances in antimicrobial resistance and structural glycobiology. It is intended for students, researchers, educators, and anyone interested in microbiology and infectious diseases.</p>
+            <p class="author-summary">This article is an independent scientific awareness summary prepared strictly to communicate recent advances in antimicrobial resistance, structural glycobiology, and vaccine target identification. It is intended to support student learning, research observation, and public educational awareness.</p>
 
             <div class="disclaimer-box">
                 <div class="disclaimer-title">Disclaimer</div>
-                <p class="disclaimer-text">This blog is an independent educational summary and is not affiliated with the authors of the original research or with <em>Frontiers in Immunology</em>. All scientific credit belongs exclusively to the original research team.</p>
+            <h3 class="section-heading" style="margin-bottom: 20px;">References</h3>
+            <ol style="margin-bottom: 40px; font-size: 0.95rem; color: #475569;">
+                <li>Monteiro M. A., et al. Clostridioides difficile water-soluble zwitterionic lipoteichoic-acid wsPS-III: Structure, synthesis and immunogenicity. <em>Frontiers in Immunology</em>. 2026.</li>
+                <li>Frontiers Media Research Portal Indexing Database. Ref ID: <a href="https://frontiersin.org" target="_blank">fimmu.2026.1901286</a>.</li>
+            </ol>
+
+            <div class="author-section-title">
+                <span class="author-icon">✍</span> About the Author
+            </div>
+            
+            
+                <div class="author-name">Chankit Giri</div>
+                <div class="author-title">Research Scholar</div>
+                <div class="author-title">CSIR–Institute of Microbial Technology (CSIR-IMTECH), Chandigarh, India</div>
+            </div>
+
+            <p class="author-summary">This article is an independent scientific awareness summary prepared strictly to communicate recent advances in antimicrobial resistance, structural glycobiology, and vaccine target identification. It is intended to support student learning, research observation, and public educational awareness.</p>
+
+            <div class="disclaimer-box">
+                <div class="disclaimer-title">Disclaimer</div>
+                <p class="disclaimer-text">This blog post is an independent secondary review compiled solely for educational purposes, student guidance, and academic awareness. The author (<strong>Chankit Giri</strong>) is not affiliated with the original research teams, did not participate in the raw data collection, structural modeling, or laboratory assay stages of the cited studies, and does not claim credit for any of the original data points presented. All scientific credit belongs exclusively to the original authors published in the peer-reviewed journal (Monteiro M. A., et al., Frontiers in Immunology, 2026).</p>
             </div>
 
             <footer class="blog-footer">
@@ -4068,6 +4102,5 @@ This blog post is an independent secondary review compiled solely for educationa
 
         </article>
     </div>
-
 </body>
 </html>
