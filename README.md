@@ -1,18 +1,42 @@
 # chankit-2323.github.io
-Scientific blog and research portal dedicated to updates and raising awareness on Antimicrobial Resistance (AMR).
-# Welcome to My AMR Research Portal
 
-Hi, I'm Chankit. This portal is a dedicated space for sharing insights, tracking updates, and raising awareness about **Antimicrobial Resistance (AMR)**—one of the greatest global health challenges of our time.
+🔬 **AMR Research & Awareness Portal**
 
-## About Me
-I am deeply passionate about the intersection of microbiology, clinical pharmacology, and global health strategy. My goal is to synthesize complex scientific data regarding drug-resistant pathogens into actionable insights for the wider scientific community.
-
-## Featured Presentation
-I recently put together a comprehensive breakdown of the escalating global crisis. 
-* 📊 **Download my slides:** [AMR Crisis Presentation](AMR_Crisis%20Chankit.pptx)
+Welcome to my dedicated space for sharing targeted insights into Antimicrobial Resistance (AMR) and anaerobic microbiology. This platform is specifically designed to help scholars, early-career researchers, and students access structured genetic data, review current literature, and find the foundational insights needed to formulate their own research hypotheses.
 
 ---
-## Latest Scientific Thoughts & Articles
-*Check back regularly for my latest deep-dives into recent research papers, clinical trials, and epidemiology reports.*
 
-* 📝 *First article coming soon!*
+## 👨‍🔬 About Me
+
+I am a molecular microbiologist focused on studying **bacterial pathogenesis** and **microbial bioprospecting**. My work centers on anaerobic pathogens that cause severe healthcare-associated infections, aiming to understand how these organisms survive host environments and establish disease.
+
+---
+
+## 🎯 Current Research Focus
+
+My primary research is dedicated to understanding resistance and virulence mechanisms in the healthcare-associated pathogen ***Clostridioides difficile***. 
+
+### Transcriptional Regulation in *C. difficile*
+My current experimental work focuses on characterizing a specific, key **transcription factor** to decode its regulatory networks. I am functionally confirming its direct regulatory interactions with:
+* **Spore Coat Genes**: Investigating the genetic control behind structural spore assembly and environmental resilience.
+* **Toxin Genes**: Mapping the direct activation or repression of core virulence factors responsible for disease pathogenesis.
+* **Stress-Associated Genes**: Evaluating how this regulator modulates bacterial survival under environmental, antibiotic, and host-mediated stressors.
+
+> 📊 **Manuscript Status**: A comprehensive research paper detailing these targeted transcriptional interactions is currently **under communication** for peer review.
+
+---
+
+## 🧪 Bioprospecting & Exploratory Interests
+
+In tandem with genetic regulation, I am deeply interested in harnessing the metabolic potential of the anaerobic microbiome:
+* **Anaerobic Isolates Exploration**: Screening and cultivating novel anaerobic bacterial strains from unique ecological niches.
+* **Antimicrobial Discovery**: Identifying secondary metabolites capable of bypassing established resistance mechanisms to serve as templates for next-generation antimicrobials.
+
+---
+
+## 📬 Academic Collaboration
+
+If you are a student, scholar, or fellow researcher looking to discuss transcriptional networks, build research hypotheses, or collaborate on anaerobic bioprospecting, feel free to reach out.
+
+* **GitHub:** [@chankit-2323](https://github.com)
+* **Research Portal:** [chankit-2323.github.io](https://github.io)
