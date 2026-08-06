@@ -5090,202 +5090,167 @@ Readers are strongly encouraged to consult the original publications for complet
 
 </div>
 Blog #11
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog #11: Reviving Vancomycin via SagA Inhibition</title>
-    <style>
-        :root {
-            --primary-bg: #f6f8fa;          
-            --card-bg: #ffffff;             
-            --accent-blue: #0969da;          
-            --text-main: #24292f;            
-            --text-muted: #57606a;          
-            --border-color: #d0d7de;        
-            --info-bg: #ddf4ff;             
-            --info-border: #0969da;
-            --alert-bg: #ffebe9;            
-            --alert-border: #cf222e;
-            --code-bg: #f6f8fa;             
-        }
+<style>
+    .widescreen-blog-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        background-color: #ffffff !important;
+        margin: 0 !important;
+        padding: 45px 10% !important; 
+        box-sizing: border-box !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+        line-height: 1.75 !important;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--primary-bg);
-            color: var(--text-main);
-            line-height: 1.7;
-            margin: 0;
-            padding: 40px 20px;
-        }
+    .widescreen-blog-wrapper h1, 
+    .widescreen-blog-wrapper h2, 
+    .widescreen-blog-wrapper h3, 
+    .widescreen-blog-wrapper p, 
+    .widescreen-blog-wrapper li, 
+    .widescreen-blog-wrapper div,
+    .widescreen-blog-wrapper summary {
+        color: #24292f !important;
+    }
 
-        .blog-container {
-            max-width: 820px;
-            margin: 0 auto;
-            background-color: var(--card-bg);
-            padding: 45px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 3px 12px rgba(140, 149, 159, 0.15);
-        }
+    .widescreen-blog-wrapper h1 {
+        font-size: 2.5rem !important;
+        font-weight: 800 !important;
+        margin-top: 0 !important;
+        margin-bottom: 12px !important;
+    }
 
-        .blog-id {
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--accent-blue);
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
+    .widescreen-blog-wrapper h2 {
+        font-size: 1.7rem !important;
+        font-weight: 700 !important;
+        margin-top: 40px !important;
+        margin-bottom: 18px !important;
+        padding-bottom: 8px !important;
+        border-bottom: 1px solid #d0d7de !important;
+    }
 
-        h1, h2, h3, h4, h5, h6 {
-            color: #24292f !important;
-        }
+    .widescreen-blog-wrapper strong {
+        color: #000000 !important;
+    }
 
-        h1 {
-            font-size: 2.4rem;
-            margin-top: 0;
-            margin-bottom: 12px;
-            line-height: 1.2;
-            font-weight: 800;
-        }
+    .widescreen-blog-wrapper .blog-id-tag {
+        font-size: 0.95rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 3px !important;
+        color: #0969da !important;
+        font-weight: 700 !important;
+        margin-bottom: 8px !important;
+    }
 
-        .author-line {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            font-style: italic;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 15px;
-        }
+    .widescreen-blog-wrapper .author-subline {
+        font-size: 1.15rem !important;
+        color: #57606a !important;
+        margin-bottom: 30px !important;
+        font-style: italic !important;
+        border-bottom: 1px solid #d0d7de !important;
+        padding-bottom: 15px !important;
+    }
 
-        .highlight-notice {
-            background-color: var(--info-bg);
-            border-left: 4px solid var(--info-border);
-            padding: 18px 22px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 35px;
-            font-size: 0.95rem;
-            color: #24292f !important;
-        }
+    .widescreen-blog-wrapper .info-callout {
+        background-color: #ddf4ff !important;
+        border-left: 4px solid #0969da !important;
+        padding: 18px 22px !important;
+        border-radius: 0 8px 8px 0 !important;
+        margin-bottom: 35px !important;
+        font-size: 0.95rem !important;
+    }
 
-        .highlight-notice strong, .highlight-notice em {
-            color: #000000 !important;
-        }
+    .widescreen-blog-wrapper .info-callout strong, 
+    .widescreen-blog-wrapper .info-callout em {
+        color: #24292f !important;
+    }
 
-        .danger-notice {
-            background-color: var(--alert-bg);
-            border-left: 4px solid var(--alert-border);
-            padding: 18px 22px;
-            border-radius: 0 8px 8px 0;
-            margin-top: 45px;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            color: #a40e26 !important;
-        }
+    .widescreen-blog-wrapper .process-flow-box {
+        background-color: #f6f8fa !important;
+        border: 1px solid #d0d7de !important;
+        padding: 25px !important;
+        border-radius: 6px !important;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
+        font-size: 0.95rem !important;
+        color: #0550ae !important; 
+        text-align: center !important;
+        margin: 30px 0 !important;
+        line-height: 1.6 !important;
+    }
 
-        .danger-notice strong {
-            color: #cf222e !important;
-        }
+    .widescreen-blog-wrapper .dropdown-container {
+        background-color: #f6f8fa !important;
+        border: 1px solid #d0d7de !important;
+        border-radius: 6px !important;
+        margin: 25px 0 !important;
+        overflow: hidden !important;
+    }
 
-        h2 {
-            font-size: 1.65rem;
-            margin-top: 40px;
-            margin-bottom: 18px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid var(--border-color);
-        }
+    .widescreen-blog-wrapper summary {
+        padding: 16px !important;
+        font-weight: 600 !important;
+        cursor: pointer !important;
+        background-color: rgba(0,0,0,0.02) !important;
+    }
 
-        p, li, div {
-            color: var(--text-main);
-        }
+    .widescreen-blog-wrapper .dropdown-body {
+        padding: 20px !important;
+        font-size: 0.95rem !important;
+        border-top: 1px solid #d0d7de !important;
+        background-color: #ffffff !important;
+    }
 
-        strong {
-            color: #000000 !important;
-        }
+    .widescreen-blog-wrapper a {
+        color: #0969da !important;
+        text-decoration: none !important;
+        font-weight: 500 !important;
+    }
 
-        a {
-            color: var(--accent-blue);
-            text-decoration: none;
-            font-weight: 500;
-        }
+    .widescreen-blog-wrapper a:hover {
+        text-decoration: underline !important;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .widescreen-blog-wrapper .signature-area {
+        margin-top: 40px !important;
+        border-top: 1px solid #d0d7de !important;
+        padding-top: 25px !important;
+    }
 
-        .mechanism-box {
-            background-color: var(--code-bg);
-            border: 1px solid var(--border-color);
-            padding: 25px;
-            border-radius: 6px;
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-            font-size: 0.9rem;
-            color: #0550ae; 
-            text-align: center;
-            margin: 30px 0;
-            line-height: 1.5;
-        }
+    .widescreen-blog-wrapper .sig-name {
+        font-size: 1.1rem !important;
+        color: #24292f !important;
+        font-weight: 600 !important;
+    }
 
-        .accordion-wrapper {
-            background-color: var(--code-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            margin: 25px 0;
-            overflow: hidden;
-        }
+    .widescreen-blog-wrapper .sig-title {
+        font-size: 0.85rem !important;
+        color: #57606a !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1.5px !important;
+        margin-top: 2px !important;
+    }
 
-        summary {
-            padding: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            outline: none;
-            color: #24292f;
-            background-color: rgba(0,0,0,0.02);
-            transition: background 0.2s ease;
-        }
+    .widescreen-blog-wrapper .bottom-disclaimer-box {
+        background-color: #ffebe9 !important;
+        border-left: 4px solid #cf222e !important;
+        padding: 18px 22px !important;
+        border-radius: 0 8px 8px 0 !important;
+        margin-top: 45px !important;
+        margin-bottom: 10px !important;
+        font-size: 0.9rem !important;
+        color: #a40e26 !important;
+    }
 
-        summary:hover {
-            background-color: rgba(0,0,0,0.04);
-        }
-
-        .accordion-body {
-            padding: 20px;
-            font-size: 0.95rem;
-            border-top: 1px solid var(--border-color);
-            background-color: var(--card-bg);
-        }
-
-        .footer-sig {
-            margin-top: 40px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 25px;
-        }
-
-        .author-name {
-            font-size: 1.1rem;
-            color: #24292f;
-            font-weight: 600;
-        }
-
-        .author-title {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-top: 2px;
-        }
-    </style>
-</head>
-<body>
-<div class="blog-container">
-    <div class="blog-id">Blog #11</div>
+    .widescreen-blog-wrapper .bottom-disclaimer-box strong {
+        color: #cf222e !important;
+    }
+</style>
+<div class="widescreen-blog-wrapper">
+    <div class="blog-id-tag">Blog #11</div>
 
     <h1>Reviving a Defeated Giant: How pghi-4 Rescues Vancomycin Against Superbug VREfm</h1>
-    <div class="author-line">By Chankit Giri, Researcher at CSIR-IMTECH</div>
+    <div class="author-subline">By Chankit Giri, Researcher at CSIR-IMTECH</div>
 
-    <div class="highlight-notice">
+    <div class="info-callout">
         💡 <strong>Awareness &amp; Education Notice:</strong> This platform is designed strictly for scientific literacy and educational dissemination. Full structural intellectual rights, experimental metrics, and discovery footprints belong entirely to the original investigating authors (<em>Fam, K. T., et al., 2026</em>) and their publishing house (<em>Springer Nature / Nature Communications</em>).
     </div>
 
@@ -5301,7 +5266,7 @@ Blog #11
     <h2>The Adjuvant Strategy: How pghi-4 Works</h2>
     <p>To recreate this effect without genetic modification, the Moses Laboratory at CSHL screened a vast library via <strong>diversity-oriented clicking (DOC)</strong>, yielding a highly reactive class of compounds known as <em>&beta;-chloroalkenyl sulfonyl fluorides</em>. The optimized lead molecule, designated <strong>pghi-4</strong>, acts as a precise small-molecule adjuvant.</p>
 
-    <div class="mechanism-box">
+    <div class="process-flow-box">
 [ Small Molecule Adjuvant: pghi-4 ]<br>
 &darr; (Irreversible Covalent Binding)<br>
 [ SagA Enzyme Active Hydrolase Site ]<br>
@@ -5319,10 +5284,10 @@ Blog #11
         <li><strong>In Vivo Efficacy:</strong> When tested in living animal models, co-administration of the pghi-4 combination led to significant clearance of systemic bacterial loads and increased survival rates in mice with acute VREfm-induced sepsis.</li>
     </ul>
 
-    <div class="accordion-wrapper">
+    <div class="dropdown-container">
         <details>
             <summary>🔬 Why is the Adjuvant Architecture Superior to Traditional Pipelines?</summary>
-            <div class="accordion-body">
+            <div class="dropdown-body">
                 Traditional discovery models focus almost exclusively on developing direct-acting bactericidal agents. These agents exert intense selective pressure on microbes, rapidly driving the emergence of new mutations. Adjuvants like <strong>pghi-4</strong> exert very little direct evolutionary pressure because they are non-lethal on their own. They preserve the clinical utility of existing, thoroughly safety-tested compounds while dramatically lowering development timelines and costs.
             </div>
         </details>
@@ -5342,14 +5307,12 @@ Blog #11
         <li><strong>Institutional Reference:</strong> Cold Spring Harbor Laboratory Press Communications &amp; Scripps Chemical Biology Repositories (Released June/July 2026).</li>
     </ul>
 
-    <div class="footer-sig">
-        <div class="author-name">Chankit Giri</div>
-        <div class="author-title">Researcher, CSIR - Institute of Microbial Technology (IMTECH)</div>
+    <div class="signature-area">
+        <div class="sig-name">Chankit Giri</div>
+        <div class="sig-title">Researcher, CSIR - Institute of Microbial Technology (IMTECH)</div>
     </div>
 
-    <div class="danger-notice">
+    <div class="bottom-disclaimer-box">
         ⚠️ <strong>Disclaimer:</strong> This blog post is a personal academic summary compiled by Chankit Giri for public awareness, open-source scientific discussion, and education. The analytical summaries, interpretations, and layout structures presented here do not represent the official stance, policies, or endorsements of CSIR-IMTECH, the Council of Scientific &amp; Industrial Research, or any government agency. This content is not intended as medical advice.
     </div>
 </div>
-</body>
-</html>
