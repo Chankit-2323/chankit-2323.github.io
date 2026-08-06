@@ -5090,7 +5090,6 @@ Readers are strongly encouraged to consult the original publications for complet
 
 </div>
 Blog #11
-</section>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5099,17 +5098,17 @@ Blog #11
     <title>Blog #11: Reviving Vancomycin via SagA Inhibition</title>
     <style>
         :root {
-            --primary-bg: #0d1117;
-            --card-bg: #161b22;
-            --accent-blue: #58a6ff;
-            --text-main: #c9d1d9;
-            --text-muted: #8b949e;
-            --border-color: #30363d;
-            --info-bg: rgba(56, 139, 253, 0.15);
-            --info-border: #388bfd;
-            --alert-bg: rgba(240, 88, 88, 0.15);
-            --alert-border: #f05858;
-            --code-bg: #090d13;
+            --primary-bg: #f6f8fa;          
+            --card-bg: #ffffff;             
+            --accent-blue: #0969da;          
+            --text-main: #24292f;            
+            --text-muted: #57606a;          
+            --border-color: #d0d7de;        
+            --info-bg: #ddf4ff;             
+            --info-border: #0969da;
+            --alert-bg: #ffebe9;            
+            --alert-border: #cf222e;
+            --code-bg: #f6f8fa;             
         }
 
         body {
@@ -5128,7 +5127,7 @@ Blog #11
             padding: 45px;
             border-radius: 8px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            box-shadow: 0 3px 12px rgba(140, 149, 159, 0.15);
         }
 
         .blog-id {
@@ -5140,9 +5139,12 @@ Blog #11
             margin-bottom: 8px;
         }
 
+        h1, h2, h3, h4, h5, h6 {
+            color: #24292f !important;
+        }
+
         h1 {
             font-size: 2.4rem;
-            color: #ffffff;
             margin-top: 0;
             margin-bottom: 12px;
             line-height: 1.2;
@@ -5165,6 +5167,11 @@ Blog #11
             border-radius: 0 8px 8px 0;
             margin-bottom: 35px;
             font-size: 0.95rem;
+            color: #24292f !important;
+        }
+
+        .highlight-notice strong, .highlight-notice em {
+            color: #000000 !important;
         }
 
         .danger-notice {
@@ -5175,36 +5182,37 @@ Blog #11
             margin-top: 45px;
             margin-bottom: 10px;
             font-size: 0.9rem;
-            color: #ff7b72;
+            color: #a40e26 !important;
+        }
+
+        .danger-notice strong {
+            color: #cf222e !important;
         }
 
         h2 {
             font-size: 1.65rem;
-            color: #ffffff;
             margin-top: 40px;
             margin-bottom: 18px;
             padding-bottom: 6px;
             border-bottom: 1px solid var(--border-color);
         }
 
-        p {
-            margin-top: 0;
-            margin-bottom: 18px;
-            text-align: justify;
-        }
-
-        ul {
-            margin-top: 0;
-            margin-bottom: 20px;
-            padding-left: 22px;
-        }
-
-        li {
-            margin-bottom: 10px;
+        p, li, div {
+            color: var(--text-main);
         }
 
         strong {
-            color: #ffffff;
+            color: #000000 !important;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         .mechanism-box {
@@ -5214,11 +5222,10 @@ Blog #11
             border-radius: 6px;
             font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
             font-size: 0.9rem;
-            color: #79c0ff;
+            color: #0550ae; 
             text-align: center;
             margin: 30px 0;
             line-height: 1.5;
-            box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
         }
 
         .accordion-wrapper {
@@ -5234,13 +5241,13 @@ Blog #11
             font-weight: 600;
             cursor: pointer;
             outline: none;
-            color: #ffffff;
-            background-color: rgba(255,255,255,0.02);
+            color: #24292f;
+            background-color: rgba(0,0,0,0.02);
             transition: background 0.2s ease;
         }
 
         summary:hover {
-            background-color: rgba(255,255,255,0.06);
+            background-color: rgba(0,0,0,0.04);
         }
 
         .accordion-body {
@@ -5258,7 +5265,7 @@ Blog #11
 
         .author-name {
             font-size: 1.1rem;
-            color: #ffffff;
+            color: #24292f;
             font-weight: 600;
         }
 
@@ -5273,19 +5280,15 @@ Blog #11
 </head>
 <body>
 <div class="blog-container">
-    <!-- Blog Tracker -->
     <div class="blog-id">Blog #11</div>
 
-    <!-- Main Headings -->
     <h1>Reviving a Defeated Giant: How pghi-4 Rescues Vancomycin Against Superbug VREfm</h1>
     <div class="author-line">By Chankit Giri, Researcher at CSIR-IMTECH</div>
 
-    <!-- Mandatory Educational Disclaimer -->
     <div class="highlight-notice">
         💡 <strong>Awareness &amp; Education Notice:</strong> This platform is designed strictly for scientific literacy and educational dissemination. Full structural intellectual rights, experimental metrics, and discovery footprints belong entirely to the original investigating authors (<em>Fam, K. T., et al., 2026</em>) and their publishing house (<em>Springer Nature / Nature Communications</em>).
     </div>
 
-    <!-- Core Content Body -->
     <p>The global clinical landscape is currently locked in an evolutionary arms race against <strong>Antimicrobial Resistance (AMR)</strong>. Among the most challenging pathogens on the World Health Organization’s critical list is <strong>Vancomycin-Resistant <em>Enterococcus faecium</em> (VREfm)</strong>. This opportunistic, hospital-acquired superbug is a leading cause of severe nosocomial bacteremia, infective endocarditis, and catheter-associated urinary tract infections, leaving clinicians with severely limited treatment choices.</p>
 
     <p>For decades, the glycopeptide antibiotic <strong>Vancomycin</strong> served as medicine's foundational weapon of last resort. However, VREfm successfully altered its target peptidoglycan precursors, effectively rendering the drug obsolete. Rather than engineering an entirely new antibiotic class—a process requiring billions of dollars and a decade of development—a massive 2026 breakthrough has shifted the paradigm toward chemical restoration.</p>
@@ -5299,16 +5302,13 @@ Blog #11
     <p>To recreate this effect without genetic modification, the Moses Laboratory at CSHL screened a vast library via <strong>diversity-oriented clicking (DOC)</strong>, yielding a highly reactive class of compounds known as <em>&beta;-chloroalkenyl sulfonyl fluorides</em>. The optimized lead molecule, designated <strong>pghi-4</strong>, acts as a precise small-molecule adjuvant.</p>
 
     <div class="mechanism-box">
-[ Small Molecule Adjuvant: pghi-4 ]
-               │
-               ▼ (Irreversible Covalent Binding)
-[ SagA Enzyme Active Hydrolase Site ]
-               │
-               ▼ (Perimeter Cross-Linking Fails)
-[ Structurally Compromised Peptidoglycan Periphery ]
-               │
-               ▼ (Vancomycin Penetration &amp; Target Binding)
-     💥 SYSTEMIC LYSIS &amp; CELL DEATH
+[ Small Molecule Adjuvant: pghi-4 ]<br>
+&darr; (Irreversible Covalent Binding)<br>
+[ SagA Enzyme Active Hydrolase Site ]<br>
+&darr; (Perimeter Cross-Linking Fails)<br>
+[ Structurally Compromised Peptidoglycan Periphery ]<br>
+&darr; (Vancomycin Penetration &amp; Target Binding)<br>
+💥 SYSTEMIC LYSIS &amp; CELL DEATH
     </div>
 
     <p>Rather than attempting to kill the bacteria directly, pghi-4 targets and inactivates SagA's active site. With its repair enzymes disabled, the superbug can no longer maintain structural integrity under antibiotic stress, allowing traditional Vancomycin to clear the infection.</p>
@@ -5319,7 +5319,6 @@ Blog #11
         <li><strong>In Vivo Efficacy:</strong> When tested in living animal models, co-administration of the pghi-4 combination led to significant clearance of systemic bacterial loads and increased survival rates in mice with acute VREfm-induced sepsis.</li>
     </ul>
 
-    <!-- Deep Technical Accordion Component -->
     <div class="accordion-wrapper">
         <details>
             <summary>🔬 Why is the Adjuvant Architecture Superior to Traditional Pipelines?</summary>
@@ -5343,13 +5342,11 @@ Blog #11
         <li><strong>Institutional Reference:</strong> Cold Spring Harbor Laboratory Press Communications &amp; Scripps Chemical Biology Repositories (Released June/July 2026).</li>
     </ul>
 
-    <!-- Author Profile Footer -->
     <div class="footer-sig">
         <div class="author-name">Chankit Giri</div>
         <div class="author-title">Researcher, CSIR - Institute of Microbial Technology (IMTECH)</div>
     </div>
 
-    <!-- Final Institutional Disclaimer -->
     <div class="danger-notice">
         ⚠️ <strong>Disclaimer:</strong> This blog post is a personal academic summary compiled by Chankit Giri for public awareness, open-source scientific discussion, and education. The analytical summaries, interpretations, and layout structures presented here do not represent the official stance, policies, or endorsements of CSIR-IMTECH, the Council of Scientific &amp; Industrial Research, or any government agency. This content is not intended as medical advice.
     </div>
